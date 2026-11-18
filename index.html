@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MX Graphics Studio</title>
+<meta name="description" content="MX Graphics Studio — l'atelier graphique de Marseille Xtra : compositions, résultats, breaking news et statistiques au format 4:5.">
+<meta name="theme-color" content="#050a1f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="mx-logo.webp">
+<link rel="apple-touch-icon" href="mx-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Anton&family=Bebas+Neue&family=Oswald:wght@500;700&family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Teko:wght@500;700&family=Montserrat:ital,wght@0,600;0,800;0,900;1,800&family=Poppins:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bgfx" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="streaks"></i><i class="grain"></i></div>
+
+<!-- ============================ ACCUEIL ============================ -->
+<main id="home">
+  <header class="nav" id="homeNav">
+    <a class="brand" href="#top" aria-label="MX Graphics Studio">
+      <img src="mx-logo.webp" alt="MX" width="38" height="38">
+      <span><b>MX</b> GRAPHICS<em>STUDIO</em></span>
+    </a>
+    <nav class="nav-actions">
+      <button class="btn ghost" id="btnLib"><span data-icon="users" data-size="18"></span><span class="hide-sm">Bibliothèque</span></button>
+      <button class="btn ghost" id="btnBackup"><span data-icon="shield" data-size="18"></span><span class="hide-sm">Sauvegarde</span></button>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-copy reveal">
+      <span class="badge"><i></i> Marseille Xtra • Atelier créatif 4:5</span>
+      <h1><span>Crée.</span> <span>Modifie.</span> <span class="grad">Publie.</span></h1>
+      <p>Compositions, résultats, breaking news et stats : tout ton média OM dans un seul studio. Des modèles prêts en 1 minute, une liberté totale ensuite.</p>
+      <div class="cta">
+        <a class="btn primary xl" href="#modeles"><span data-icon="plus" data-size="20"></span>Nouvelle création</a>
+        <a class="btn ghost xl" href="#creations">Mes créations</a>
+      </div>
+      <ul class="pills">
+        <li>1080 × 1350 px</li><li>Hors-ligne</li><li>Polices perso</li><li>100 % gratuit</li>
+      </ul>
+    </div>
+    <div class="hero-stack" id="heroStack" aria-hidden="true">
+      <div class="hcard c1"><span class="sk"></span><img alt=""></div>
+      <div class="hcard c2"><span class="sk"></span><img alt=""></div>
+      <div class="hcard c3"><span class="sk"></span><img alt=""></div>
+    </div>
+  </section>
+
+  <section class="section" id="modeles">
+    <div class="sec-head reveal"><span class="eyebrow">Commencer</span><h2>Choisis un modèle</h2><p>Chaque modèle est un point de départ : tout reste déplaçable, remplaçable et personnalisable.</p></div>
+    <div class="tpl-grid" id="tplGrid"></div>
+  </section>
+
+  <section class="section" id="creations">
+    <div class="sec-head reveal"><span class="eyebrow">Reprendre</span><h2>Mes créations</h2><p>Enregistrées automatiquement sur cet appareil.</p></div>
+    <div class="proj-grid" id="projGrid"></div>
+    <div class="empty-home" id="projEmpty"><span data-icon="layers" data-size="34"></span><p>Tes projets apparaîtront ici dès la première modification.</p></div>
+  </section>
+
+  <section class="section" id="biblio">
+    <div class="sec-head reveal"><span class="eyebrow">Gagner du temps</span><h2>Ta bibliothèque</h2><p>Enregistre une fois tes joueurs, logos et polices. Ils sont ensuite disponibles en deux touches.</p></div>
+    <div class="lib-cards">
+      <button class="lib-card reveal" data-lib="players"><span data-icon="user" data-size="28"></span><b>Joueurs</b><small id="cntPlayers">0 photo</small></button>
+      <button class="lib-card reveal" data-lib="logos"><span data-icon="hex" data-size="28"></span><b>Logos</b><small id="cntLogos">0 logo</small></button>
+      <button class="lib-card reveal" data-lib="fonts"><span data-icon="font" data-size="28"></span><b>Polices</b><small id="cntFonts">0 police</small></button>
+    </div>
+  </section>
+
+  <section class="section" id="sauvegarde">
+    <div class="backup reveal">
+      <div><span class="eyebrow">Sécurité</span><h3>Sauvegarde de tes données</h3>
+        <p>Tes projets, joueurs, logos et polices sont stockés dans le navigateur de ce téléphone. Exporte une copie de temps en temps pour ne rien perdre si tu changes d'appareil.</p></div>
+      <div class="row gap wrap">
+        <button class="btn primary" id="btnExportAll"><span data-icon="download" data-size="18"></span>Exporter une sauvegarde</button>
+        <button class="btn" id="btnImportAll"><span data-icon="upload" data-size="18"></span>Importer</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot"><img src="mx-logo.webp" alt="" width="26" height="26"><span>MX GRAPHICS STUDIO • Marseille Xtra • Fait avec 💙 pour l'OM</span></footer>
+</main>
+
+<!-- ============================ ÉDITEUR ============================ -->
+<section id="editor" hidden>
+  <header class="topbar">
+    <button class="icon-btn" id="btnBack" aria-label="Retour à l'accueil"><span data-icon="back" data-size="22"></span></button>
+    <div class="name-wrap"><input id="projName" class="proj-name" aria-label="Nom du projet" maxlength="60" autocomplete="off"><small id="saveState"></small></div>
+    <div class="spacer"></div>
+    <button class="icon-btn" id="btnUndo" aria-label="Annuler"><span data-icon="undo" data-size="20"></span></button>
+    <button class="icon-btn" id="btnRedo" aria-label="Rétablir"><span data-icon="redo" data-size="20"></span></button>
+    <button class="btn primary" id="btnExport"><span data-icon="download" data-size="18"></span><span>Exporter</span></button>
+  </header>
+  <div class="work">
+    <div class="stage-host" id="stageHost">
+      <div class="stage" id="stage">
+        <canvas id="cv" width="1080" height="1350"></canvas>
+        <canvas id="ov" width="1080" height="1350"></canvas>
+      </div>
+      <div class="quick" id="quick"></div>
+    </div>
+    <aside class="inspector" id="inspector">
+      <nav class="tabs" id="tabs">
+        <button class="tab on" data-tab="model"><span data-icon="wand" data-size="20"></span><em>Modèle</em></button>
+        <button class="tab" data-tab="add"><span data-icon="plus" data-size="20"></span><em>Ajouter</em></button>
+        <button class="tab" data-tab="layers"><span data-icon="layers" data-size="20"></span><em>Calques</em></button>
+        <button class="tab" data-tab="props"><span data-icon="sliders" data-size="20"></span><em>Réglages</em></button>
+        <button class="tab" data-tab="bg"><span data-icon="palette" data-size="20"></span><em>Fond</em></button>
+      </nav>
+      <div class="panels">
+        <div class="panel on" id="pModel"></div>
+        <div class="panel" id="pAdd"></div>
+        <div class="panel" id="pLayers"></div>
+        <div class="panel" id="pProps"></div>
+        <div class="panel" id="pBg"></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div id="modalRoot"></div>
+<div id="toasts" aria-live="polite"></div>
+<div class="boot" id="boot"><img src="mx-logo.webp" alt=""><i></i></div>
+
+<script src="engine.js"></script>
+<script src="editor.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

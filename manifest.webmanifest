@@ -1,0 +1,16 @@
+{
+  "name": "MX Graphics Studio",
+  "short_name": "MX Studio",
+  "description": "Atelier graphique de Marseille Xtra : compositions, résultats, breaking et stats au format 4:5.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050a1f",
+  "theme_color": "#050a1f",
+  "lang": "fr",
+  "icons": [
+    { "src": "mx-logo.webp", "sizes": "512x512", "type": "image/webp", "purpose": "any" },
+    { "src": "mx-logo.webp", "sizes": "512x512", "type": "image/webp", "purpose": "maskable" }
+  ]
+}
